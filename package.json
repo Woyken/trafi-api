@@ -1,0 +1,24 @@
+{
+  "name": "trafi-api",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build-tsp-json": "tsp compile . --options=@typespec/openapi3.file-type=json",
+    "build-tsp-yaml": "tsp compile .",
+    "build": "concurrently \"npm:build-tsp-*\"",
+    "serve": "scalar document serve tsp-output/@typespec/openapi3/openapi.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@scalar/cli": "1.7.7",
+    "@typespec/compiler": "1.10.0",
+    "@typespec/http": "1.10.0",
+    "@typespec/openapi": "1.10.0",
+    "@typespec/openapi3": "1.10.0",
+    "@typespec/rest": "0.80.0",
+    "concurrently": "9.2.1"
+  }
+}
